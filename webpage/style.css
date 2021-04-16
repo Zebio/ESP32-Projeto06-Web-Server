@@ -1,0 +1,30 @@
+
+
+html
+{
+    color: #ffffff;
+	font-family: Verdana;
+	text-align: center;
+	background-color: #272727fd
+
+}
+
+.botao_on
+{
+	color: #ffffff;
+	padding: 15px 25px;
+	font-size: 30px;
+	margin: 2px;
+	font-family: Tahoma;
+	background-color: #313891a6;
+}
+
+.botao_off
+{
+	color: #ffffff;
+	padding: 15px 25px;
+	font-size: 30px;
+	margin: 2px;
+	font-family: Tahoma;
+	background-color: #7c7c7ca6;
+}
