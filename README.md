@@ -8,7 +8,7 @@ Podemos controlar as saídas por qualquer navegador na mesma rede. O IP do ESP �
 
 ### Esquemático do Hardware 
 
-Neste projeto tivemos um problema com a alimentação, pois ao usar a função "WiFi.begin(ssid, password)"
+Esse projeto exige uma boa alimentação, pois ao usar a função "WiFi.begin(ssid, password)"
 a antena de 2.4 GHz é acionada e nesse instante o dispositivo consome muita corrente. Se a alimentação não estiver boa,
 a tensão de pode cair e consequentemente ativar o brownout reset do dispositivo, o reiniciando.
 
