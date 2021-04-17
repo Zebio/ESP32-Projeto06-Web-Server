@@ -4,14 +4,16 @@
 #include <iostream>
 
 
+
+
 /*---------------------Mapeamento de Hardware----------------------*/
 #define led1 32
 #define led2 33
 
 
 /*---------------------Constantes de Projeto ----------------------*/
-const char * ssid = "tira_o_zoio";
-const char * password = "jabuticaba";
+const char * ssid = "nome_da_rede";
+const char * password = "senha_da_rede";
 
 /*---------------------Variáveis GLobais    ----------------------*/
 bool led1_status = false;
@@ -83,10 +85,8 @@ void serverWifi()
         char c = client.read();            
         Serial.write(c);                   
         header += c;
-        if (c == '\n') {
-          Serial.println("primeiro if");                   
+        if (c == '\n') {                 
           if (currentLine.length() == 0||currentLine=="\n") {
-          Serial.println("segundo if");   
 
           client.println("HTTP/1.1 200 OK");
           client.println("Content-type:text/html");
@@ -106,9 +106,11 @@ void serverWifi()
             digitalWrite(led2,led2_status);
           }
             Serial.println("Imprimindo pagina HTML");
-            client.println("<!DOCTYPE html><html><head><meta http-equiv=\"Content-Language\" content=\"pt-br, en, fr, it\"><title>Projeto05 - Automação com ESP32</title><link rel=\"icon\" href=\"data:,\"></head>");
+            client.println("<!DOCTYPE html><html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"></head>");
+            client.println("<link rel=\"icon\" href=\"data:,\">");
+            client.println("<title>Projeto05 - Automacao com ESP32</title>");
             client.println("<style> html{color: #ffffff;font-family: Verdana;text-align: center;background-color: #272727fd}.botao_on{color: #ffffff;padding: 15px 25px;font-size: 30px;margin: 2px;font-family: Tahoma;background-color: #313891a6;}.botao_off{color: #ffffff;padding: 15px 25px;font-size: 30px;margin: 2px;font-family: Tahoma;background-color: #7c7c7ca6;}</style>");
-            client.println("<body><h2>Controle de Saídas</h2>");
+            client.println("<body><h2>Controle de Saidas</h2>");
             if (led1_status)
               client.println("<p><a href=\"/led1\"><button class=\"botao_on\" > LED 1   </button></a></p>");
             else 
@@ -126,12 +128,9 @@ void serverWifi()
         }
         else if (c != '\r')  
           currentLine += c;      //adiciona caractere como parte da mensage
- 
       }
     }
-
     header = "";                              //limpa header
-   
     client.stop();                            //finaliza conexão
     Serial.println("Cliente desconectado"); 
     Serial.println("");  
