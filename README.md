@@ -2,7 +2,7 @@
 
 ### Demonstração
 
-Para mostrar o funcionamento do sistema foi criado um berve vídeo mostrando a interação do sistema com o usuário: 
+Para mostrar o funcionamento do sistema foi criado um breve vídeo mostrando a interação do sistema com o usuário: 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/8yiR9su6jWE/0.jpg)](http://www.youtube.com/watch?v=8yiR9su6jWE "Web Server para Automação com ESP32 ")
 
 
