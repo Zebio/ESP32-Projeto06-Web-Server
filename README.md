@@ -12,6 +12,8 @@ Este projeto implementa um server que pode ser usado para automação, seja indu
 
 Podemos controlar as saídas por qualquer navegador na mesma rede. O IP do ESP é impresso na Porta Serial
 
+Posteriormente foi criado o [Projeto 09](https://github.com/Zebio/ESP32-Projeto09-Http-Server), que é praticamente idêntico a esse, ele realiza a mesma função, porém seu software foi escrito em linguagem C no framework nativo do ESP32, o SDK IDF. 
+
 ### Esquemático do Hardware 
 
 Esse projeto exige uma boa alimentação, pois ao usar a função "WiFi.begin(ssid, password)"
